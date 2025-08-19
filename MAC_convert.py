@@ -39,9 +39,6 @@ if uploaded_file is not None:
     # 파일을 처리하고 새로운 내용 생성
     processed_content = process_file(uploaded_file)
     
-    st.write("### 처리 결과 미리보기")
-    st.code(processed_content)
-    
     # 다운로드 버튼 생성
     st.download_button(
         label="처리된 파일 다운로드",
@@ -49,3 +46,6 @@ if uploaded_file is not None:
         file_name="processed_mac_addresses.txt",
         mime="text/plain"
     )
+    
+    st.write("### 처리 결과 미리보기")
+    st.code(processed_content)
